@@ -16,6 +16,7 @@ public class FileWatcherModule extends DropwizardAwareModule<FileWatcherConfigur
   protected void configure() {
 
     //bind the GreetingGenerator Instance
+    environment().jersey().setUrlPattern("/*");
     bind(GreetingGenerator.class).annotatedWith(Names.named("urlGreetingGenerator")).toInstance(new URLDrivenGreetingGenerator(configuration()));
 
     CollectorRegistry collectorRegistry = new CollectorRegistry();

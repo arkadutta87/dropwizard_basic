@@ -1,6 +1,10 @@
 package org.bharatcoder;
 
+import java.util.Collections;
+import java.util.Map;
+
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import io.dropwizard.Configuration;
 import lombok.Getter;
@@ -14,5 +18,8 @@ public class FileWatcherConfiguration extends Configuration {
   private String template;
   @NotEmpty
   private String defaultName = "Stranger";
+
+  @NotNull
+  private Map<String, Map<String, String>> viewRendererConfiguration = Collections.emptyMap();
 
 }
