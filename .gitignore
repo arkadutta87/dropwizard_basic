@@ -1,0 +1,5 @@
+.idea/
+arka-logs.log
+dependency-reduced-pom.xml
+dropwizard_basic.iml
+target/

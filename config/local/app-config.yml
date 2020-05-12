@@ -1,0 +1,21 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+  minThreads: 50
+  type: default
+  maxThreads: 1024
+  maxQueuedRequests: 1024
+  gzip:
+    enabled: true
+    minimumEntitySize: 128B
+    bufferSize: 8KB
+    deflateCompressionLevel: 9
+    includedMethods: [POST, GET]
+
+
+template: "Hello, %s!"
+defaultName: "Stranger"
